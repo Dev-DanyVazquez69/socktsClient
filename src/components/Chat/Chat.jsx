@@ -60,9 +60,8 @@ export default function Chat({socket}) {
           ))
         }
         <div ref={bottomRef} />
-        </div>
-        <div className={style["chat-footer"]}>
-          <Input inputRef={messageRef} placeholder='Mensagem' onKeyDown={(e)=>getEnterKey(e)} fullWidth />
+        </div>        <div className={style["chat-footer"]}>
+          <Input inputRef={messageRef} placeholder='Mensagem' onKeyDown={(e)=>getEnterKey(e)} fullWidth style={{color:"#fff"}}/>
           <SendIcon sx={{m:1, cursor: 'pointer'}} onClick={()=>handleSubmit()} color="primary" />
         </div>
       </div>

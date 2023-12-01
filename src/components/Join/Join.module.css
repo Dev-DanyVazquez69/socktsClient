@@ -1,14 +1,23 @@
 .join-container{
-  background-color: #ffffff;
-  color: #000;
-  width: 450px;
-  height: 250px;
+  background-color: #00000031;
+  border: 2px solid rgb(0, 0, 0);
+  color: #ffffff;
+  max-width: 450px;
+  width: 95vw;
+  height: 300px;
   border-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px;
 
   -webkit-box-shadow: 5px 5px 17px 1px rgba(0, 0, 0, 0.3);
 	box-shadow: 5px 5px 17px 1px rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+  width: 50px;
+  height: 50px
+  ;
 }

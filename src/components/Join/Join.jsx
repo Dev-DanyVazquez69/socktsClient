@@ -10,7 +10,7 @@ export default function Join({setChatVisibility, setSocket}) {
   const handleSubmit = async () => {
     const username = usernameRef.current.value
     if(!username.trim()) return
-    const socket = await io.connect('http://3.145.104.26:3001')
+    const socket = await io.connect('http://localhost:3002')
     socket.emit('set_username', username)
     setSocket(socket)
     setChatVisibility(true)
@@ -18,8 +18,11 @@ export default function Join({setChatVisibility, setSocket}) {
 
   return (
     <div className={style['join-container']}>
-      <h2>ChatZap</h2>
-      <Input inputRef={usernameRef} placeholder='Insira seu nome' />
+      <div style={{display:"flex", gap:"10px", alignItems:"center"}}>
+        <h2>ChatZap</h2>
+        <img className={style['logo']} src='src/assets/msg.png'/>
+      </div>
+      <Input style={{color:"white"}} inputRef={usernameRef} placeholder='Insira seu nome' />
       <Button sx={{mt:2}} onClick={()=>handleSubmit()} variant="contained">Prosseguir</Button>
     </div>
   )
